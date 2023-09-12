@@ -16,7 +16,7 @@ namespace PicPaySimplificado.Domain.ValueObjects
 
         protected Email() { }
 
-        public Email(string address)
+        internal Email(string address)
         {
             if (Validate(address))
                 Address = address;

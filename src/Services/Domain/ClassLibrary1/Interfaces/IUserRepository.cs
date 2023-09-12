@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace PicPaySimplificado.Domain.Interfaces
 {
-    public interface IUsuarioRepository : IRepository<User>
+    public interface IUserRepository : IRepository<User>
     {
         // Users
         Task<IEnumerable<User>> GetAllUsers();
         Task<User> GetUserById(Guid id);
         Task<User> GetByDocument(string document);
         Task<User> GetByEmail(string email);
-        Task CreateUser(User user);
-        Task UpdateUser(User user);
-        Task DeleteUser(Guid id);
+        void CreateUser(User user);
+        void UpdateUser(User user);
+        void DeleteUser(Guid id);
 
         // Transactions
         Task<IEnumerable<Transaction>> GetAllTransactions();
@@ -25,5 +25,6 @@ namespace PicPaySimplificado.Domain.Interfaces
         Task<IEnumerable<Transaction>> GetUserPayerTransactions(Guid payerId);
         Task<IEnumerable<Transaction>> GetTransactionsOrdered(DateTime date);
         Task<Transaction> GetTransactionById(Guid id);
+        void AdicionarTransaction(Transaction transaction);
     }
 }

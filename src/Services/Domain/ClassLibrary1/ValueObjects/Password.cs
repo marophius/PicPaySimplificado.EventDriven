@@ -14,7 +14,7 @@ namespace PicPaySimplificado.Domain.ValueObjects
 
         protected Password() { }
 
-        public Password(string value)
+        internal Password(string value)
         {
             if (Validate(value))
             {

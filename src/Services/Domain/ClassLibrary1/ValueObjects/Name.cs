@@ -15,7 +15,7 @@ namespace PicPaySimplificado.Domain.ValueObjects
 
         protected Name() { }
 
-        public Name(string firstName, string lastName)
+        internal Name(string firstName, string lastName)
         {
             if(Validate(firstName) && Validate(lastName))
             {
