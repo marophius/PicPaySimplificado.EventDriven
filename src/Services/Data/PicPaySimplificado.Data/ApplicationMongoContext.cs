@@ -1,4 +1,6 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+using PicPaySimplificado.Data.DatabaseConfig;
 using PicPaySimplificado.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,9 +15,9 @@ namespace PicPaySimplificado.Data
         private readonly IMongoDatabase _database;
 
         public ApplicationMongoContext(IMongoClient client, 
-            string databaseName)
+            IOptions<MongoDbConfig> config)
         {
-            _database = client.GetDatabase(databaseName);
+            _database = client.GetDatabase(config.Value.DatabaseName);
         }
 
         public IMongoCollection<User> Users => _database.GetCollection<User>("Users");

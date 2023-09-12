@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PicPaySimplificado.Core.Data;
 using PicPaySimplificado.Domain.Entities;
 
 namespace PicPaySimplificado.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IUnitOfWork
     {
         protected ApplicationDbContext() { }
 
@@ -26,6 +27,11 @@ namespace PicPaySimplificado.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 
             base.OnModelCreating(modelBuilder);
+        }
+
+        public async Task<bool> Commit()
+        {
+            return await base.SaveChangesAsync() > 0;
         }
     }
 }
