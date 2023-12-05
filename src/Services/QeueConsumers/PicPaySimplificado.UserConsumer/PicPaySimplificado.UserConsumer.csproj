@@ -6,17 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.1.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
-    <PackageReference Include="Rebus" Version="7.2.1" />
-    <PackageReference Include="Rebus.RabbitMq" Version="8.1.0" />
-    <PackageReference Include="Rebus.ServiceProvider" Version="9.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\" />
+    <ProjectReference Include="..\..\Application\PicPaySimplificado.Application\PicPaySimplificado.Application.csproj" />
   </ItemGroup>
 
 </Project>

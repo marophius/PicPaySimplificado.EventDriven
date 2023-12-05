@@ -22,6 +22,21 @@ namespace PicPaySimplificado.Domain.Entities
             PayeeId = payeeId;
         }
 
+        public Transaction(
+            Guid id,
+            decimal value,
+            Guid payerId,
+            Guid payeeId,
+            DateTimeOffset transactionDate)
+        {
+            Id = id;
+            TransactionDate = DateTime.Now;
+            ValidateValue(value);
+            PayerId = payerId;
+            PayeeId = payeeId;
+            TransactionDate = transactionDate;
+        }
+
         public Guid PayerId { get; private set; }
 
         public virtual User PayerUser { get; set; }

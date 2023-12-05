@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using PicPaySimplificado.Core.DomainObjects;
 using PicPaySimplificado.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,16 +10,19 @@ using System.Threading.Tasks;
 
 namespace PicPaySimplificado.Data.Mappings
 {
-    public class UserMongoMap
+    public class UserMongoMap 
     {
 
         public static void Configure()
         {
-            BsonClassMap.RegisterClassMap<User>(map =>
+            BsonClassMap.RegisterClassMap<Entity>(map =>
             {
                 map.AutoMap();
-                map.MapIdProperty(u => u.Id);
-
+                map.MapIdProperty(x => x.Id);
+                map.SetIsRootClass(true);
+            });
+            BsonClassMap.RegisterClassMap<User>(map =>
+            {
                 map.MapProperty(u => u.Document)
                    .SetElementName("Document");
 

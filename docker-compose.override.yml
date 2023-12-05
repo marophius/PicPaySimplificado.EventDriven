@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  picpaysimplificado.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  picpaysimplificado.transactionconsumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+
+  picpaysimplificado.userconsumer:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+

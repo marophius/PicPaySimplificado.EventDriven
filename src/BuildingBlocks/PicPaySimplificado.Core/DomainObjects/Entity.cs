@@ -8,7 +8,7 @@ namespace PicPaySimplificado.Core.DomainObjects
 {
     public class Entity
     {
-        public Guid Id { get; }
+        public Guid Id { get; protected set; }
 
         protected Entity() 
         {

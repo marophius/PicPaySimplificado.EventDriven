@@ -30,6 +30,29 @@ namespace PicPaySimplificado.Domain.Entities
             ValidateBalance(balance);
             RegisterDate = DateTimeOffset.Now;
         }
+
+        public User(
+            Guid id,
+            string firstName,
+            string lastName,
+            string document,
+            string email,
+            string password,
+            decimal balance,
+            int userType,
+            DateTimeOffset registerDate
+            )
+        {
+            Id = id;
+            Name = new Name(firstName, lastName);
+            Email = new Email(email);
+            Password = new Password(password);
+            UpdateUserType(userType, document);
+            ValidateBalance(balance);
+            RegisterDate = DateTimeOffset.Now;
+            RegisterDate = registerDate;
+        }
+
         public Name Name { get; private set; }
         public Document Document { get; private set; }
         public Email Email { get; private set; }

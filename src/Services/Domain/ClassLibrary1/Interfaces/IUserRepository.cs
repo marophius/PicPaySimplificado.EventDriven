@@ -16,8 +16,11 @@ namespace PicPaySimplificado.Domain.Interfaces
         Task<User> GetByDocument(string document);
         Task<User> GetByEmail(string email);
         void CreateUser(User user);
+        
         void UpdateUser(User user);
+        
         void DeleteUser(Guid id);
+        
 
         // Transactions
         Task<IEnumerable<Transaction>> GetAllTransactions();
@@ -25,6 +28,6 @@ namespace PicPaySimplificado.Domain.Interfaces
         Task<IEnumerable<Transaction>> GetUserPayerTransactions(Guid payerId);
         Task<IEnumerable<Transaction>> GetTransactionsOrdered(DateTime date);
         Task<Transaction> GetTransactionById(Guid id);
-        void AdicionarTransaction(Transaction transaction);
+        void CreateTransaction(Transaction transaction);
     }
 }

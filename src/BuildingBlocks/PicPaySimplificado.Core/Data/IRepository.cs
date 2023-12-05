@@ -9,5 +9,6 @@ namespace PicPaySimplificado.Core.Data
 {
     public interface IRepository<T> : IDisposable where T : IAgregateRoot
     {
+        IUnitOfWork UnitOfWork { get; }
     }
 }

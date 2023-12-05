@@ -11,7 +11,7 @@ namespace PicPaySimplificado.Core.Messages
     public class Command : Message, IRequest<bool>
     {
         public DateTime TimeStamp { get; private set; }
-        public ValidationResult ValidationResult { get; protected set; }
+        public ValidationResult? ValidationResult { get; protected set; }
 
         protected Command()
         {

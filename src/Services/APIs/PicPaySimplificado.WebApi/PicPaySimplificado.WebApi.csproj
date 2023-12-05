@@ -6,11 +6,26 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\PicPaySimplificado.Application\PicPaySimplificado.Application.csproj" />
+    <ProjectReference Include="..\..\Data\PicPaySimplificado.Data\PicPaySimplificado.Data.csproj" />
+    <ProjectReference Include="..\..\Domain\ClassLibrary1\PicPaySimplificado.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\PicPaySimplificado.Infrastructure\PicPaySimplificado.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

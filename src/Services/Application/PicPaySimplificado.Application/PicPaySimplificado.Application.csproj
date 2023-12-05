@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\PicPaySimplificado.Core\PicPaySimplificado.Core.csproj" />
+    <ProjectReference Include="..\..\Data\PicPaySimplificado.Data\PicPaySimplificado.Data.csproj" />
+    <ProjectReference Include="..\..\Domain\ClassLibrary1\PicPaySimplificado.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

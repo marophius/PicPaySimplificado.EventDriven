@@ -31,13 +31,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicPaySimplificado.WebApi",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F6DF6D0A-6D0D-459F-918D-8E9AF33261F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicPaySimplificado.Infrastructure", "src\Services\Infrastructure\PicPaySimplificado.Infrastructure\PicPaySimplificado.Infrastructure.csproj", "{24CC815D-0967-40A6-BD88-6F9B0F384906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicPaySimplificado.Infrastructure", "src\Services\Infrastructure\PicPaySimplificado.Infrastructure\PicPaySimplificado.Infrastructure.csproj", "{24CC815D-0967-40A6-BD88-6F9B0F384906}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QeueConsumers", "QeueConsumers", "{26D469FC-10CE-487F-8DB8-FFCFB46D0C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicPaySimplificado.UserConsumer", "src\Services\QeueConsumers\PicPaySimplificado.UserConsumer\PicPaySimplificado.UserConsumer.csproj", "{EA335242-156A-4B9E-8C1F-6210597BC527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicPaySimplificado.UserConsumer", "src\Services\QeueConsumers\PicPaySimplificado.UserConsumer\PicPaySimplificado.UserConsumer.csproj", "{EA335242-156A-4B9E-8C1F-6210597BC527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicPaySimplificado.TransactionConsumer", "src\Services\QeueConsumers\PicPaySimplificado.TransactionConsumer\PicPaySimplificado.TransactionConsumer.csproj", "{A4653EA2-4E98-4368-AC01-9560C92B8717}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PicPaySimplificado.TransactionConsumer", "src\Services\QeueConsumers\PicPaySimplificado.TransactionConsumer\PicPaySimplificado.TransactionConsumer.csproj", "{A4653EA2-4E98-4368-AC01-9560C92B8717}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3D781956-E25C-44EE-8290-4B2F99D1CCD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{A4653EA2-4E98-4368-AC01-9560C92B8717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4653EA2-4E98-4368-AC01-9560C92B8717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4653EA2-4E98-4368-AC01-9560C92B8717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D781956-E25C-44EE-8290-4B2F99D1CCD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D781956-E25C-44EE-8290-4B2F99D1CCD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D781956-E25C-44EE-8290-4B2F99D1CCD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D781956-E25C-44EE-8290-4B2F99D1CCD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

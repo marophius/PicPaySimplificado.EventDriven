@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 using PicPaySimplificado.Core.Data;
 using PicPaySimplificado.Domain.Entities;
 using PicPaySimplificado.Domain.Interfaces;
@@ -13,7 +14,7 @@ namespace PicPaySimplificado.Data.Repository
     public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext _context;
-        private readonly ApplicationMongoContext _mongoContext;
+        
         public IUnitOfWork UnitOfWork => (IUnitOfWork)_context;
         public UserRepository(
             ApplicationDbContext context,
@@ -22,8 +23,6 @@ namespace PicPaySimplificado.Data.Repository
         {
 
             _context = context;
-            _mongoContext = mongoContext;
-
         }
         public void CreateUser(User user)
         {
@@ -77,7 +76,7 @@ namespace PicPaySimplificado.Data.Repository
             _context.Dispose();
         }
 
-        public void AdicionarTransaction(Transaction transaction)
+        public void CreateTransaction(Transaction transaction)
         {
             _context.Transactions.Add(transaction);
         }

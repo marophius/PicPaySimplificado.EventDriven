@@ -13,6 +13,8 @@ namespace PicPaySimplificado.Domain.ValueObjects
         public const int CNPJ_MAX_LENGTH = 14;
         public string Number { get; private set; }
 
+        protected Document() { }
+
         internal Document(string number, int type)
         {
             ValidateDocument(number, type);
